@@ -1,0 +1,63 @@
+body {
+    background-color: #2e004e; /* Roxo Fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.calculator {
+    background-color: #c8a2c8; /* Lilás */
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.9); /* Brilho Preto */
+    width: 300px;
+    transition: width 0.3s ease;
+}
+
+.calculator.scientific {
+    width: 380px;
+}
+
+.display {
+    background-color: #1a1a1a;
+    color: #e0b0ff;
+    padding: 20px;
+    text-align: right;
+    font-size: 1.8rem;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    min-height: 35px;
+    word-wrap: break-word;
+    box-shadow: inset 0 0 10px #000;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.btn {
+    padding: 15px 5px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: #dcd0ff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7);
+    transform: scale(1.02);
+}
+
+.sci-func { display: none; background: #9370db; color: white; }
+.calculator.scientific .sci-func { display: block; }
+.btn-toggle { width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 10px; cursor: pointer; background: #4b0082; color: white; border: none; }
+.btn-equal { background: #8e44ad; color: white; }
+.op { background: #b19cd9; }
